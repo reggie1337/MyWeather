@@ -1,0 +1,66 @@
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.app-container {
+    width: 75vw;
+    background-color: #4da9ff;
+}
+
+.sidebar-container {
+    width: 25vw;
+    background-color: #4075ff;
+    padding-bottom: 30%;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-data{
+    color: #fff;
+    text-align: center;
+}
+
+.app-title {
+    font-size: xx-large;
+}
+
+.title-temp{
+    font-size: xx-large;
+}
+
+.title-icon {
+    font-size: 10em;
+}
+
+.title-city {
+    font-size: x-large;
+}
+
+.sidebar-title {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.sidebar-temp {
+    font-size: large;
+}
+
+.sidebar-icon {
+    font-size: 5em;
+}
+
+.sidebar-wea {
+    font-size: large;
+}
+
+.sidebar-setting {
+    font-size: large;
+    padding-left: 4em;
+    padding-bottom: 4em;
+}
