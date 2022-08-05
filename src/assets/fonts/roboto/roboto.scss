@@ -1,0 +1,37 @@
+$font-weights: (
+  'Thin': 100,
+  'Light': 300,
+  'Medium': 500,
+  'Bold': 700,
+  'Black': 900,
+);
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('./Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Italic'), url('./Roboto-Italic.ttf');
+}
+
+@each $name, $weight in $font-weights {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: $weight;
+    src: local('Roboto'), local('Roboto-#{$name}'), url('./Roboto-#{$name}.ttf');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: $weight;
+    src: local('Roboto'), local('Roboto-#{$name}Italic'), url('./Roboto-#{$name}Italic.ttf');
+  }
+}

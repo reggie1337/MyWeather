@@ -31,14 +31,18 @@
 }
 
 .title-temp{
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: xx-large;
 }
 
 .title-icon {
+    padding-top: 16px;
     font-size: 10em;
 }
 
 .title-city {
+    padding-top: 16px;
     font-size: x-large;
 }
 
@@ -48,19 +52,29 @@
 }
 
 .sidebar-temp {
-    font-size: large;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: x-large;
 }
 
 .sidebar-icon {
+    padding-top: 16px;
     font-size: 5em;
 }
 
 .sidebar-wea {
-    font-size: large;
+    padding-top: 16px;
+    font-size: x-large;
 }
 
 .sidebar-setting {
-    font-size: large;
-    padding-left: 4em;
-    padding-bottom: 4em;
+    font-size: x-large;
+    padding-left: 6em;
+    padding-bottom: 2em;
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/src/assets/fonts.scss');
+}
+
