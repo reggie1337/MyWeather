@@ -12,9 +12,12 @@ export class HomeComponent implements OnInit {
   faSun= faSun;
   faCloudShowersHeavy = faCloudShowersHeavy;
   faGear = faGear;
-  constructor() {}
+  constructor() {};
 
   ngOnInit(): void {
-  }
+  };
+  openModal(){
+    
+  };
 
 }

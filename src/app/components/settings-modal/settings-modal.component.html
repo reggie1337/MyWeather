@@ -1,23 +1,20 @@
-<button id="sidebar-settings">settings-modal</button>
+<button id="settings">settings-modal</button>
 <div id="settings modal" class="modal"></div>
 <div class="modal-content">
     <span class="close"&times;></span>
     <p>settings</p>
 </div>
 <script>    
-    var modal= document.getElementById("settingModal");
-    var btn = document.getElementById("sidebar-setting");
-    var span = document.getElementsByClassName("close") [0]
-    btn.onclick= function(){
-        modal.style.display ="block";
+    function openModal(){
+        document.getElementById(settingsModal).style.display="block";
+        document.body.classList.add('settings-modal-open');
     };
-    span.onclick=function(){
-        modal.style.display ="none"
+    
+    function closeModal(){
+        document.getElementById(settingsModal).style.display="none";
+        document.body.classList.remove('settings-modal-open')
     };
-    window.onclick = function(event){
-        if (event.target ==modal){
-            modal.style.display="none"
-        }
-    }
 </script>
 
+<div class="modal"></div>
+<div class="modal-content"></div>
