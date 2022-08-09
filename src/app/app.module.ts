@@ -4,13 +4,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SettingsComponent } from './pages/settings/settings.component';
-import { AppRoutingModule } from './pages/routing/app.routing.module';
+import { AppRoutingModule } from './routing/app.routing.module';
+import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SettingsComponent,
+    SettingsModalComponent,
   ],
 
   imports: [

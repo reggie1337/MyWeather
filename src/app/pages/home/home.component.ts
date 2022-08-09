@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
+import { SettingsModalComponent } from 'src/app/components/settings-modal/settings-modal.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
