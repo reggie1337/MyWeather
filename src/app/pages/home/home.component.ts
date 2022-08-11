@@ -12,12 +12,12 @@ export class HomeComponent implements OnInit {
   faSun= faSun;
   faCloudShowersHeavy = faCloudShowersHeavy;
   faGear = faGear;
-  constructor() {};
+  constructor(private SettingsModal: SettingsModalComponent) {};
 
   ngOnInit(): void {
   };
-  openModal(){
-    
+  openModal(id: string){
+    this.SettingsModal.open();
   };
 
 }
