@@ -1,17 +1,21 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-
+import { Component, ElementRef, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { SettingsService } from './settings.service';
 @Component({
   selector: 'app-settings-modal',
   templateUrl: './settings-modal.component.html',
-  styleUrls: ['./settings-modal.component.scss']
+  styleUrls: ['./settings-modal.component.scss'],
+  encapsulation : ViewEncapsulation.None
 })
 export class SettingsModalComponent implements OnInit{
 
   @Input()
-  id!: string;
+  
+  id: string;
   private element : any;
 
-  constructor(private SettingsModal: SettingsModalComponent) {};
+  constructor(private SettingsService : SettingsService, private el :ElementRef) {
+    this.element = el.nativeElement
+  };
 
 ngOnInit(): void {
   
@@ -20,19 +24,26 @@ ngOnInit(): void {
   }
   document.body.appendChild(this.element);
 
-  this.element.addEventListener('click', (el: { target: { className: string; }; }) =>{
-    if(el.target.className === 'Settings-modal'){
+  this.element.addEventListener('click', el =>{
+    if(el.target.className === 'app-settings-modal'){
       this.close()
     }
-  })
+  });
+  this.SettingsService.add(this);
 
 }
+ngOnDestroy(): void {
+  this.SettingsService.remove(this.id);
+  this.element.remove();
+}
+
 open(): void {
   this.element.style.display = 'block';
-  document.body.classList.add('SettingsModal-open');
+  document.body.classList.add('app-settings-modal-open');
 }
 close(): void {
   this.element.style.display = 'none';
-  document.body.classList.remove('SettingsModal-oepn');
+  document.body.classList.remove('app-settings-modal-oepn');
+ }
 }
-}
+ 
