@@ -10,7 +10,8 @@
     <div class="sidebar-container flex-container">  
         <div class="text-data">
             <fa-icon [icon]="faGear" class="sidebar-setting"></fa-icon>
-             <button onclick="openModal(id)">modal</button>
+             <button (click)="createModal()">modal</button>
+             <div #modal></div>
             <div class="sidebar-title">Tomorrow</div>
             <div class="sidebar-temp">91°</div>
             <fa-icon [icon]="faSun" class="sidebar-icon"></fa-icon>

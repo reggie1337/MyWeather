@@ -1,24 +1,36 @@
-import { Injectable } from "@angular/core";
+import {
+  ComponentFactoryResolver,
+  ComponentRef,
+  Injectable,
+  ViewContainerRef,
+} from '@angular/core';
+import { Subject } from 'rxjs';
+import { SettingsModalComponent } from './settings-modal.component';
 
-@Injectable ({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class SettingsService {
-    private modals : any [] =[];
+  private componentRef!: ComponentRef<SettingsModalComponent>;
+  private componentSubscriber!: Subject<string>;
+  constructor(private resovler: ComponentFactoryResolver) {}
 
-    add(modal: any){
-        this.modals.push(modal);
-    }
-    
-    remove(id:string) {
-        this.modals = this.modals.filter(m => m.id !== id);
-    }
+  openModal(entry: ViewContainerRef, modalTitle: string, modalBody: string) {
+    let factory = this.resovler.resolveComponentFactory(SettingsModalComponent);
+    this.componentRef = entry.createComponent(factory);
+    this.componentRef.instance.title = modalTitle;
+    this.componentRef.instance.body = modalBody;
+    this.componentRef.instance.closeMeEvent.subscribe(() => this.closeModal());
+    this.componentRef.instance.confirmEvent.subscribe(() => this.confirm());
+    this.componentSubscriber = new Subject<string>();
+    return this.componentSubscriber.asObservable();
+  }
 
-    open(id:string) {
-        const modal = this.modals.find(m => m.id ===id)
-        modal.open();
-    }
+  closeModal() {
+    this.componentSubscriber.complete();
+    this.componentRef.destroy();
+  }
 
-    close(id:string) {
-        const modal = this.modals.find (m => m.id === id);
-        modal.close();
-    }
+  confirm() {
+    this.componentSubscriber.next('confirm');
+    this.closeModal();
+  }
 }
