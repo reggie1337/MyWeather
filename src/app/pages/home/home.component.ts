@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
