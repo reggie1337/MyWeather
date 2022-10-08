@@ -4,16 +4,14 @@
     </div>
     <div class="modal-measurements">
         Measurements
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label>
+            <input type="checkbox" id="switch" class="checkbox">
+            <label for="switch" class="toggle">
+                <p>F    C</p>
+            </label>
     </div>
     <div class="modal-Location">
         Location
-        <select id="State" name="city">
-            <option value="PL">Plant City</option>
-        </select>
+        <input type="text" class="input" placeholder="Plant City">
     </div>
     <div class="footer">
         <button class="cancel"(click)="cancel()">Cancel</button>

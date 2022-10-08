@@ -9,7 +9,7 @@
     </div>
     <div class="sidebar-container flex-container">  
         <div class="text-data">
-            <fa-icon [icon]="faGear" class="sidebar-setting" class="btn" (click)="openModal()"></fa-icon>
+            <fa-icon [icon]="faGear" class="sidebar-setting"  (click)="openModal()"></fa-icon>
              <app-settings-modal *ngIf="settingsModalOpened" [injectData]="defaultSettings" (closed)="cancelModal($event)" (saved)="saveModal($event)"></app-settings-modal>
             <div class="sidebar-title">Tomorrow</div>
             <div class="sidebar-temp">91°</div>

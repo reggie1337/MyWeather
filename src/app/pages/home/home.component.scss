@@ -10,6 +10,7 @@
 }
 
 .sidebar-container {
+    display: flex;
     width: 25vw;
     background-color: #4075ff;
     padding-bottom: 30%;
@@ -24,6 +25,7 @@
 .text-data{
     color: #fff;
     text-align: center;
+    display: fixed;
 }
 
 .app-title {
@@ -68,10 +70,11 @@
     font-size: x-large;
 }
 
-.sidebar-setting {
+.sidebar-container .text-data .sidebar-setting {
+    display: block;
+    padding-left: 10rem;
+    padding-bottom: 8rem;
     font-size: x-large;
-    padding-left: 6em;
-    padding-bottom: 2em;
     cursor: pointer;
 }
 
