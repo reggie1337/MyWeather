@@ -13,17 +13,16 @@ export class HomeComponent implements OnInit {
   faCloudShowersHeavy = faCloudShowersHeavy;
   faGear = faGear;
   defaultSettings: Temp = {
-    isTemp: true
+    isTemp: true,
   };
   settingsModalOpened = false;
 
-
-  openModal() : void {
-    this.settingsModalOpened = true
+  openModal(): void {
+    this.settingsModalOpened = true;
   }
 
   closeModal(): void {
-    this.settingsModalOpened = false
+    this.settingsModalOpened = false;
   }
 
   cancelModal(closed: boolean): void {
@@ -33,13 +32,11 @@ export class HomeComponent implements OnInit {
   }
 
   saveModal(settings: Temp): void {
-    console.warn("modal is working")
+    console.warn('modal is working');
     this.closeModal();
   }
 
   ngOnInit(): void {}
 
-
-  ngOnDestroy(): void {
-  }
+  ngOnDestroy(): void {}
 }

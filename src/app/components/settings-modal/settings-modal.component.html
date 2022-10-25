@@ -1,21 +1,23 @@
 <div class="modal-container">
-    <div class="modal-title">
-        Settings
+  <div class="modal-title">Settings</div>
+  <div class="form-control">
+    <div class="modal-measurements">Measurements</div>
+    <div class="unit-container">
+      <div class="unit-label">F</div>
+      <label class="switch">
+        <input type="checkbox" checked />
+        <span class="slider round"></span>
+      </label>
+      <div class="unit-label">C</div>
     </div>
-    <div class="modal-measurements">
-        Measurements
-            <input type="checkbox" id="switch" class="checkbox">
-            <label for="switch" class="toggle">
-                <p>F    C</p>
-            </label>
-    </div>
-    <div class="modal-Location">
-        Location
-        <input type="text" class="input" placeholder="Plant City">
-    </div>
-    <div class="footer">
-        <button class="cancel"(click)="cancel()">Cancel</button>
-        <button class="save" (click)="save()">Save</button>
-    </div>
+  </div>
+  <div class="form-control">
+    <label>Location</label>
+    <input type="text" class="input" placeholder="Plant City" />
+  </div>
+  <div class="footer">
+    <button class="cancel" (click)="cancel()">Cancel</button>
+    <button class="save" (click)="save()">Save</button>
+  </div>
 </div>
 <div class="cover"></div>

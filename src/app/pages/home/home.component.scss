@@ -1,85 +1,83 @@
 .page-wrapper {
-    display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .app-container {
-    width: 75vw;
-    background-color: #4da9ff;
+  width: 75vw;
+  background-color: #4da9ff;
 }
 
 .sidebar-container {
-    display: flex;
-    width: 25vw;
-    background-color: #4075ff;
-    padding-bottom: 30%;
+  display: flex;
+  width: 25vw;
+  background-color: #4075ff;
+  padding-bottom: 30%;
 }
 
 .flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.text-data{
-    color: #fff;
-    text-align: center;
-    display: fixed;
+.text-data {
+  color: #fff;
+  text-align: center;
+  display: fixed;
 }
 
 .app-title {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
-.title-temp{
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: xx-large;
+.title-temp {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: xx-large;
 }
 
 .title-icon {
-    padding-top: 16px;
-    font-size: 10em;
+  padding-top: 16px;
+  font-size: 10em;
 }
 
 .title-city {
-    padding-top: 16px;
-    font-size: x-large;
+  padding-top: 16px;
+  font-size: x-large;
 }
 
 .sidebar-title {
-    font-size: x-large;
-    font-weight: 500;
+  font-size: x-large;
+  font-weight: 500;
 }
 
 .sidebar-temp {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: x-large;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: x-large;
 }
 
 .sidebar-icon {
-    padding-top: 16px;
-    font-size: 5em;
-    
+  padding-top: 16px;
+  font-size: 5em;
 }
 
 .sidebar-wea {
-    padding-top: 16px;
-    font-size: x-large;
+  padding-top: 16px;
+  font-size: x-large;
 }
 
 .sidebar-container .text-data .sidebar-setting {
-    display: block;
-    padding-left: 10rem;
-    padding-bottom: 8rem;
-    font-size: x-large;
-    cursor: pointer;
+  display: block;
+  padding-left: 10rem;
+  padding-bottom: 8rem;
+  font-size: x-large;
+  cursor: pointer;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('/src/assets/fonts.scss');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts.scss");
 }
-

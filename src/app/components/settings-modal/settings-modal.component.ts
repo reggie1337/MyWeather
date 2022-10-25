@@ -1,10 +1,6 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+FormsModule;
 
 import { Temp } from './temp';
 
@@ -12,21 +8,20 @@ import { Temp } from './temp';
   selector: 'app-settings-modal',
   templateUrl: './settings-modal.component.html',
   styleUrls: ['./settings-modal.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class SettingsModalComponent {
-  @Input() injectData! : Temp
+  @Input() injectData!: Temp;
   @Output() saved = new EventEmitter<Temp>();
   @Output() closed = new EventEmitter<boolean>();
 
   save(): void {
-    console.warn('working')
-      this.saved.emit({
-        isTemp: !this.injectData.isTemp
-      });
-  } 
+    console.warn('working');
+    this.saved.emit({
+      isTemp: !this.injectData.isTemp,
+    });
+  }
 
   cancel(): void {
-    this.closed.emit(true)
+    this.closed.emit(true);
   }
 }
