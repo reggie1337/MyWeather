@@ -18,8 +18,8 @@
   z-index: 1000;
   font-family: "Times New Roman", Times, serif;
   background: #fff;
-  height: 200px;
-  width: 400px;
+  height: 150px;
+  width: 250px;
   border-radius: 25px;
 }
 
@@ -47,6 +47,7 @@
 .modal-title {
   color: black;
   font-weight: bold;
+  text-align: center;
 }
 
 .modal-body {
@@ -64,6 +65,7 @@
     border: 0;
     background-color: #add8e6;
     border-radius: 10px;
+    margin: 20px;
 
     &:hover(:last-child) {
       margin-right: 10px;
